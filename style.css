@@ -1,0 +1,82 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Базовые стили кнопок - ВСЕ ФИОЛЕТОВЫЕ */
+.duration-button,
+.payment-button {
+    background: linear-gradient(90deg, #8b5cf6, #9333ea) !important;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Выбранная кнопка - становится зеленой */
+.duration-button.selected,
+.payment-button.selected {
+    background: linear-gradient(90deg, #10b981, #22c55e) !important;
+    animation: highlight 0.4s ease forwards;
+}
+
+@keyframes highlight {
+    0% { background: linear-gradient(90deg, #8b5cf6, #9333ea); }
+    100% { background: linear-gradient(90deg, #10b981, #22c55e); }
+}
+
+.hidden {
+    display: none;
+}
+
+.hover-scale-105:hover {
+    transform: scale(1.05);
+}
+
+.transition-transform {
+    transition-property: transform;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+}
+
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.flex { display: flex; }
+.gap-4 { gap: 1rem; }
+.font-bold { font-weight: 700; }
+.text-lg { font-size: 1.125rem; }
+.text-white { color: white; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.rounded-lg { border-radius: 0.5rem; }
+
+/* Кнопка оплаты */
+.pay-button {
+    background: linear-gradient(90deg, #facc15, #f97316);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
