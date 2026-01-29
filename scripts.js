@@ -101,6 +101,6 @@ function payInBot() {
         return;
     }
 
-    const url = `https://t.me/CelestialXBot?start=celestialplus_${selectedDuration}_${selectedPayment.value}`;
+    const url = `https://t.me/KefirrXBot?start=celestialplus_${selectedDuration}_${selectedPayment.value}`;
     window.open(url, "_blank");
 }
